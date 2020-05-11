@@ -1,0 +1,16 @@
+/* Showcase */
+.jumbotron {
+    padding: 200px 0;
+    /* note: ../ takes you out of css folder */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/shelves-of-games.png);
+}
+
+/* Featured Games */
+#featured-games img {
+    width: 350px;
+    height: 350px;
+}
+
+footer {
+    height: 600px;
+}
