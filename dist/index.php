@@ -1,65 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/f3bd12c617.js" crossorigin="anonymous"></script>
-
-    <title>Game-R-Us Home</title>
-</head>
-
-<body>
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <!-- Logo -->
-            <a class="navbar-brand" href="index.html"><img src="img/games-R-us-logo.png" alt="games-R-Us-logo"></a>
-            <!-- Sandwich button -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMenu"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Items in navbar -->
-            <div class="collapse navbar-collapse" id="navMenu">
-                <ul class="navbar-nav ml-auto text-right">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Games</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php 
+        $page = 'home';
+        include("inc/header.php");
+    ?>
 
     <!-- SHOWCASE -->
-    <div class="jumbotron jumbotron-fluid text-center text-light">
-        <h1 class="display-4 mb-4">Get Great Games at Low Prices.</h1>
-        <p class="lead mb-5">At Games R Us you can get all of the great, popular games you need!</p>
-        <p><a href="#" class="btn btn-primary btn-lg">Shop Games</a></p>
+    <div class="jumbotron jumbotron-fluid text-center text-light d-flex justify-content-center align-items-center">
+        <div id="showcaseinner">
+            <h1 class="display-4 mb-4">Get Great Games at Low Prices.</h1>
+            <p class="lead mb-5">At Games R Us you can get all of the great, popular games you need!</p>
+            <p><a href="games.php" class="btn btn-primary btn-lg">Shop Games</a></p>
+        </div>
+
     </div>
 
     <!-- FEATURED GAMES -->
     <h2 class="text-center mb-5">Featured Games</h2>
-    <div id="featured-games" class="container">
+    <div id="featured-games" class="container mb-2">
         <div class="row row-col-md-2">
             <!-- game 1 -->
             <div class="col">
@@ -128,20 +84,56 @@
         </div>
     </div>
 
-    <!-- Footer to scroll past end -->
-    <footer></footer>
+    <!--TESTIMONIALS / BENEFITS -->
+    <div id="testimonials" class="bg-white text-center">
+        <div class="container">
 
-    <!-- JavaScript scripts-->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-    </script>
-</body>
+            <div id="testimonial-carousel" class="carousel slide" data-ride="carousel">
 
-</html>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <h3>Great Quality!</h3>
+                        <blockquote class="blockquote text-center">
+                            <p class="mb-0">I'm so happy with the games from Games-r-us!<br>
+                                Great quality and hours of enjoyment with my kids!</p>
+                            <footer class="blockquote-footer">George Foreman,<cite title="Source Title"> Happy
+                                    Dad</cite></footer>
+                        </blockquote>
+                    </div>
+                    <div class="carousel-item">
+                        <h3>Loads of Fun!</h3>
+                        <blockquote class="blockquote text-center">
+                            <p class="mb-0">Playing games is so fun and I feel my stress decreasing!</p>
+                            <footer class="blockquote-footer">Jane Foreman,<cite title="Source Title"> No stress
+                                    Mom</cite></footer>
+                        </blockquote>
+                    </div>
+                    <div class="carousel-item">
+                        <h3>Best Store Ever!</h3>
+                        <blockquote class="blockquote text-center">
+                            <p class="mb-0">Great Customer Service! Very friendly staff!</p>
+                            <footer class="blockquote-footer">Asmodon,<cite title="Source Title"> Eater of Worlds</cite>
+                            </footer>
+                        </blockquote>
+                    </div>
+                </div>
+                <a id="testimonial-previous" class="carousel-control-prev d-none d-lg-flex" href="#testimonial-carousel"
+                    role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a id="testimonial-next" class="carousel-control-next d-none d-lg-flex" href="#testimonial-carousel"
+                    role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <?php 
+        include("inc/footer.php");
+    ?>
